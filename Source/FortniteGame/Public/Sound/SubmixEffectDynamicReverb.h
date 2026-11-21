@@ -60,12 +60,26 @@ public:
 
 };
 
+/** Stub effect: passes audio through unchanged. Exists so the preset can create a valid effect instance. */
+class FSubmixEffectDynamicReverb : public FSoundEffectSubmix
+{
+public:
+	virtual void Init(const FSoundEffectSubmixInitData& InInitData) override {}
+
+	virtual void OnProcessAudio(const FSoundEffectSubmixInputData& InData, FSoundEffectSubmixOutputData& OutData) override
+	{
+		FMemory::Memcpy(OutData.AudioBuffer->GetData(), InData.AudioBuffer->GetData(), sizeof(float) * InData.NumFrames * InData.NumChannels);
+	}
+};
+
 UCLASS(HideCategories=("Object"))
 class FORTNITEGAME_API USubmixEffectDynamicReverbPreset : public USoundEffectSubmixPreset
 {
 	GENERATED_BODY()
 
 public:
+	EFFECT_PRESET_METHODS(SubmixEffectDynamicReverb)
+
 	UFUNCTION(BlueprintCallable, Category="Audio|Effects|Reverb")
 	void SetModulationSettings(const FSubmixEffectDynamicReverbSettings& InSettings);
 

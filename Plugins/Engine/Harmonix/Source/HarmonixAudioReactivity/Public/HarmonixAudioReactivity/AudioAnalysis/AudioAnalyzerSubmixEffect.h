@@ -18,12 +18,26 @@ public:
 
 };
 
+/** Stub effect: passes audio through unchanged. Exists so the preset can create a valid effect instance. */
+class FHarmonixAudioAnalyzerSubmixEffect : public FSoundEffectSubmix
+{
+public:
+	virtual void Init(const FSoundEffectSubmixInitData& InInitData) override {}
+
+	virtual void OnProcessAudio(const FSoundEffectSubmixInputData& InData, FSoundEffectSubmixOutputData& OutData) override
+	{
+		FMemory::Memcpy(OutData.AudioBuffer->GetData(), InData.AudioBuffer->GetData(), sizeof(float) * InData.NumFrames * InData.NumChannels);
+	}
+};
+
 UCLASS(HideCategories=("Object"), ClassGroup=("AudioSubmixEffect"), meta=(BlueprintSpawnableComponent))
 class UHarmonixAudioAnalyzerSubmixEffectPreset : public USoundEffectSubmixPreset
 {
 	GENERATED_BODY()
 
 public:
+	EFFECT_PRESET_METHODS(HarmonixAudioAnalyzerSubmixEffect)
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Audio|Analysis")
 	FHarmonixAudioAnalyzerSubmixEffectSettings Settings;
 
