@@ -767,6 +767,9 @@ class AFortPlayerPawn : public AFortPawn, public IFortCarriedObjectHolderInterfa
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_EmoteSound;
+	friend class UFortAnimNotifyState_SpawnProp;
+
 public:
 	UFUNCTION(BlueprintCallable, Category="Character")
 	void AddAttachment(USkeletalMesh* Attachment, TSubclassOf<UAnimInstance> InAnimBP);
@@ -3136,6 +3139,8 @@ private:
 
 	UPROPERTY(Transient)
 	TArray<TObjectPtr<UCustomCharacterPart>> RequiredVariantParts;
+
+	uint8 FrontEndMode;
 
 	UPROPERTY(Transient, Export, meta=(EditInline="true"))
 	TObjectPtr<UCosmeticDataComponent> CosmeticDataComponent;

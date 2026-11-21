@@ -63,6 +63,11 @@ class AFortPlayerMannequin : public ASkeletalMeshActor, public ICustomCharacterP
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_EmoteSound;
+
+	bool bAllowEmoteAudioComponents;
+	TMap<FName, TWeakObjectPtr<UAudioComponent>> EmoteAudioComponents;
+
 public:
 	UFUNCTION(BlueprintCallable, Category="Cosmetics")
 	FORTNITEGAME_API void ClearExistingCosmeticPetInstance();

@@ -62,6 +62,8 @@ class AFortCharacterVehicle_Ostrich : public AFortCharacterVehicle
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_EmoteSound;
+
 public:
 	UFUNCTION(BlueprintCallable, Category="Gameplay")
 	void AirDash(const FVector& InDirection, float Speed, float MinVerticalSpeed);

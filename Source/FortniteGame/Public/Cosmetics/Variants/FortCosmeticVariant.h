@@ -5,8 +5,10 @@
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/SoftObjectPtr.h"
 #include "FortCosmeticVariant.generated.h"
 
+class UCustomCharacterPart;
 class UMaterialInterface;
 
 UCLASS(Abstract, EditInlineNew, MinimalAPI)
@@ -15,6 +17,9 @@ class UFortCosmeticVariant : public UObject
 	GENERATED_BODY()
 
 public:
+	virtual void PreValidateVariant() {}
+	virtual void GetVariantCharacterParts(TArray<TSoftObjectPtr<UCustomCharacterPart>>& OutCharacterParts, FGameplayTag InVariantTag) const {}
+
 	UFUNCTION(BlueprintPure, Category="Cosmetics")
 	FORTNITEGAME_API FGameplayTagContainer GetAllVariantTags() const;
 

@@ -11,5 +11,8 @@ class UFortAnimNotifyState_SpawnArrow : public UFortAnimNotifyState_SpawnProp
 {
 	GENERATED_BODY()
 
+protected:
+	virtual void GetSkeletalMeshPropOverride(AFortPawn* FortPawn, USkeletalMesh*& InOutSkeletalMeshProp, UAnimationAsset*& InOutSkeletalMeshPropAnimation) override;
+
 };
 

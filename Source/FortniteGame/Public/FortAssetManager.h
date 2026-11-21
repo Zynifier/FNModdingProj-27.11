@@ -77,6 +77,8 @@ class UFortAssetManager : public UAssetManager
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_SpawnPickaxe;
+
 private:
 	UPROPERTY()
 	TMap<TObjectPtr<UObject>, FName> GCPreventionPool;

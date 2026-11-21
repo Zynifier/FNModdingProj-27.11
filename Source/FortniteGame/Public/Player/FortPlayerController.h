@@ -690,6 +690,8 @@ class AFortPlayerController : public AFGF_PlayerController, public ICosmeticLoad
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_SpawnPickaxe;
+
 public:
 UDELEGATE()
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnFortPawnChanged, AFortPawn*, NewPawn);

@@ -63,6 +63,8 @@ class UFortHeroSpecialization : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 
+	friend class UAthenaCharacterItemDefinition;
+
 public:
 	UFUNCTION(BlueprintPure, Category="CharacterParts")
 	const TArray<TSoftObjectPtr<UCustomCharacterPart>>& GetCharacterPartPtrs() const;

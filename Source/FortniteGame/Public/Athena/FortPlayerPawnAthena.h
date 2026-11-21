@@ -264,6 +264,8 @@ class AFortPlayerPawnAthena : public AFortPlayerPawn, public IFortMutatorContext
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_SpawnProp;
+
 public:
 	UFUNCTION(BlueprintCallable)
 	void AddComponentToPawnHighlightSet(UPrimitiveComponent* PrimitiveComponent);

@@ -19,5 +19,9 @@ public:
 	UPROPERTY(EditAnywhere, Category="CharacterPart", meta=(AssetBundles="EquippedCosmetic"))
 	TSoftObjectPtr<UMaterialInterface> HighQualityMaterial;
 
+	bool IsEmpty() const
+	{
+		return LowQualityMaterial.IsNull() && HighQualityMaterial.IsNull();
+	}
 };
 

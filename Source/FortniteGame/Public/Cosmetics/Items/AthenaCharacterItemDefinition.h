@@ -67,6 +67,11 @@ public:
 	TArray<TObjectPtr<UAssembledMeshSchema>> AssembledMeshSchemas;
 
 	virtual void GetPreviewSkeletalMeshes(TArray<USkeletalMesh*>& OutList, TArray<TSubclassOf<UAnimInstance>>& OutAnimBP) const override;
+	virtual USkeletalMesh* GetPreviewBaseMesh() const override;
+
+#if WITH_EDITOR
+	virtual EDataValidationResult IsDataValid(class FDataValidationContext& Context) const override;
+#endif
 
 protected:
 #if WITH_EDITOR

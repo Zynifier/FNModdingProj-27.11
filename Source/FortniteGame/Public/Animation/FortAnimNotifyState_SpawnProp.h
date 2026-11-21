@@ -10,10 +10,15 @@
 #include "FortAnimNotifyState_SpawnProp.generated.h"
 
 class AActor;
+class AFortPawn;
+class AFortPlayerPawnAthena;
 class UAnimInstance;
 class UAnimationAsset;
 class UAthenaCosmeticItemDefinition;
+class UFortItemDefinition;
 class UMeshComponent;
+class UPrimitiveComponent;
+class USceneComponent;
 class USkeletalMesh;
 class UStaticMesh;
 
@@ -35,6 +40,31 @@ UCLASS(HideCategories=("Object"))
 class FORTNITEGAME_API UFortAnimNotifyState_SpawnProp : public UAnimNotifyState
 {
 	GENERATED_BODY()
+
+public:
+	UFortAnimNotifyState_SpawnProp(const FObjectInitializer& ObjectInitializer);
+
+	virtual void PostLoad() override;
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
+
+	virtual void NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference) override;
+	virtual void NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference) override;
+
+protected:
+	virtual void GetActorPropOverride(AFortPawn* FortPawn, TSubclassOf<AActor>& InOutActorProp, USkeletalMesh*& InOutSkeletalMeshProp, UFortItemDefinition*& OutActorPropItemDefinition) {}
+	virtual void GetSkeletalMeshPropOverride(AFortPawn* FortPawn, USkeletalMesh*& InOutSkeletalMeshProp, UAnimationAsset*& InOutSkeletalMeshPropAnimation) {}
+	virtual void OnActorPropSpawned(AActor* ActorPropInstance, UFortItemDefinition* ActorPropItemDefinition) {}
+	virtual void OnMeshPropSpawned(UMeshComponent* MeshPropInstance);
+
+private:
+	USceneComponent* GetAttachComponent(USkeletalMeshComponent* MeshComp) const;
+	void ApplyOverlayMaterials(UObject* Target);
+	void OnOverlayMaterialLoaded(TWeakObjectPtr<UObject> WeakTarget);
+	void ApplyVariantsToComponent(UPrimitiveComponent* Component);
+	static void ApplyVariantsToActor(AActor* Actor, TWeakObjectPtr<AFortPawn> InWeakFortPawn, TSoftObjectPtr<UAthenaCosmeticItemDefinition> CosmeticItemDefinition);
+	static void ForceCustomDepthUpdate(AFortPlayerPawnAthena* FortPlayerPawnAthena);
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AnimNotify|Attachment")
@@ -118,6 +148,9 @@ public:
 #endif
 
 private:
+	FQuat RotationOffsetQuat;
+	TWeakObjectPtr<AFortPawn> WeakFortPawn;
+
 	UPROPERTY(Export, meta=(EditInline="true"))
 	TMap<TObjectPtr<UMeshComponent>, TObjectPtr<UMeshComponent>> PersistComponents;
 

@@ -142,6 +142,8 @@ class AFortWeaponRanged : public AFortWeapon
 {
 	GENERATED_BODY()
 
+	friend class UFortAnimNotifyState_SpawnArrow;
+
 public:
 	UFUNCTION(BlueprintImplementableEvent, Category="Targeting")
 	void AbortScopeFX();

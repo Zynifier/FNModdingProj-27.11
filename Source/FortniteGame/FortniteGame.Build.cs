@@ -151,5 +151,14 @@ public class FortniteGame : ModuleRules
 		{
 			"FortniteAI",
 		});
+
+		if (Target.bBuildEditor)
+		{
+			PrivateDependencyModuleNames.AddRange(new string[]
+			{
+				"SourceControl",
+				"UnrealEd",
+			});
+		}
 	}
 }

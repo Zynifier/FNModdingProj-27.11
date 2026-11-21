@@ -166,6 +166,8 @@ class UCustomCharacterPart : public UPrimaryDataAsset, public IAthenaMemoryBudge
 {
 	GENERATED_BODY()
 
+	friend class UAthenaCharacterItemDefinition;
+
 public:
 	UFUNCTION(BlueprintPure, Category="CharacterPart|Animation")
 	TSubclassOf<UAnimInstance> GetAnimClass() const;

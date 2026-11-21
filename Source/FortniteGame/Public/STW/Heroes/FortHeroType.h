@@ -72,6 +72,8 @@ class UFortHeroType : public UFortWorkerType, public IPreviewCollectionInterface
 {
 	GENERATED_BODY()
 
+	friend class UAthenaCharacterItemDefinition;
+
 public:
 	UFUNCTION(BlueprintPure, Category="HeroType")
 	TSubclassOf<UFrontendAnimInstance> GetFrontendAnimClass() const;

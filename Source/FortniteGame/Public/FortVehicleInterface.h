@@ -149,6 +149,12 @@ class FORTNITEGAME_API IFortVehicleInterface
 	GENERATED_BODY()
 
 public:
+	virtual float GetSpawnPropOnEmoteScalar() const { return 1.0f; }
+	virtual void OnEmoteAudioStarted() {}
+	virtual void OnEmoteAudioStopped() {}
+	virtual class USoundEffectSourcePresetChain* GetEmoteSoundEffectSourcePresetChain() const { return nullptr; }
+	virtual class USoundAttenuation* GetEmoteAudioAttenuation() const { return nullptr; }
+
 	UFUNCTION(BlueprintCallable)
 	virtual void AddVehicleActionNamesAndLabels(AFortPlayerPawn* FortPlayerPawn, UPARAM(ref) TArray<FName>& SeatActionNames, UPARAM(ref) TArray<FText>& SeatActionLabels);
 
