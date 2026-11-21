@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"EditorCustomVirtualPath": "S23",
+	"FortReleaseVersion": "23.00",
+	"Plugins": [
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "NiagaraFN",
+			"Enabled": true
+		},
+		{
+			"Name": "BigLeafPile",
+			"Enabled": true
+		},
+		{
+			"Name": "CowCatcherModCode",
+			"Enabled": true
+		},
+		{
+			"Name": "Dirtbike",
+			"Enabled": true
+		}
+	]
+}

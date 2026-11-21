@@ -1,0 +1,39 @@
+{
+	"FileVersion": 1,
+	"CanContainContent": true,
+	"EnabledByDefault": true,
+	"EditorCustomVirtualPath": "FortMetasound",
+	"FortReleaseVersion": "22.00",
+	"RestrictToBranch": "++Fortnite+Main",
+	"BuiltInInitialFeatureState": "Registered",
+	"Version": 1,
+	"VersionName": "",
+	"FriendlyName": "",
+	"Description": "Contains extra metasound nodes for use in Fortnite",
+	"Category": "Audio",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FortMetasound",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Metasound",
+			"Enabled": true
+		},
+		{
+			"Name": "Synthesis",
+			"Enabled": true
+		}
+	]
+}

@@ -1,0 +1,11 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#include "Athena/Modifiers/FortAthenaMutator_Valkyrie.h"
+#include "Net/UnrealNetwork.h"
+
+void AFortAthenaMutator_Valkyrie::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(AFortAthenaMutator_Valkyrie, DefaultSpawnRangeStart);
+	DOREPLIFETIME(AFortAthenaMutator_Valkyrie, DefaultSpawnRangeEnd);
+}

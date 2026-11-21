@@ -1,0 +1,23 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#include "FortControllerComponent_CreativeFunctionalTest_EquipAndFireWeapon.h"
+
+void UFortControllerComponent_CreativeFunctionalTest_EquipAndFireWeapon::ClientStartPawnFireWeapon_Implementation(const UFortWeaponItemDefinition* ItemDefThatShouldBeEquipped, int32 MinAmmoToFire)
+{
+}
+
+void UFortControllerComponent_CreativeFunctionalTest_EquipAndFireWeapon::ClientStopFiring_Implementation()
+{
+}
+
+void UFortControllerComponent_CreativeFunctionalTest_EquipAndFireWeapon::EquipPawnAndFireWeapon(const UFortWeaponItemDefinition* ItemDefToEquip, FStoppingFireDelegate StoppingFireDelegate, int32 ItemLevel, float TimeUntilStopFire, int32 MinBulletsToFire)
+{
+}
+
+void UFortControllerComponent_CreativeFunctionalTest_EquipAndFireWeapon::ServerPawnStartedFiringWeapon_Implementation()
+{
+}
+
+void UFortControllerComponent_CreativeFunctionalTest_EquipAndFireWeapon::ServerSetStopFireReason_Implementation(ECreativeFunctionalTest_StopFireReason StopFireReason)
+{
+}

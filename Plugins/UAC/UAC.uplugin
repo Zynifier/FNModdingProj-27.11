@@ -1,0 +1,33 @@
+{
+	"FileVersion": 3,
+	"FriendlyName": "UAC",
+	"Version": 1,
+	"VersionName": "1",
+	"Description": "Behave or get out",
+	"Category": "UAC",
+	"CreatedBy": "Epic Games, Inc",
+	"CreatedByURL": "http://www.epicgames.com",
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "UACServer",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"LinuxArm64"
+			]
+		},
+		{
+			"Name": "UACClient",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "UACCommon",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "Default"
+		}
+	]
+}

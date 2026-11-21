@@ -1,0 +1,15 @@
+{
+	"FileVersion": 1,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"EditorCustomVirtualPath": "Creative",
+	"FortReleaseVersion": "24.00",
+	"Plugins": [
+		{
+			"Name": "AIDebugger",
+			"Enabled": true
+		}
+	]
+}

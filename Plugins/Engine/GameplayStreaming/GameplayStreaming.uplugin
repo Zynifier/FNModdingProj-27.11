@@ -1,0 +1,43 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "GameplayStreaming",
+	"Description": "Core plugin for gameplay streaming",
+	"Category": "Gameplay Streaming",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "https://epicgames.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": false,
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GameplayStreaming",
+			"Type": "ClientOnlyNoCommandlet",
+			"LoadingPhase": "PreDefault",
+			"TargetDenyList": [
+				"Server"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "GeForceNOWWrapper",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "Luna",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		}
+	]
+}

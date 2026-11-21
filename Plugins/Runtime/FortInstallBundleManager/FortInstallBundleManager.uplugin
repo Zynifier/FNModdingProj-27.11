@@ -1,0 +1,58 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Fortnite Install Bundle Manager",
+	"Description": "Handles downloading, patching, and mounting content bundles while the game is running.",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "http://epicgames.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": false,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FortInstallBundleManager",
+			"Type": "Runtime",
+			"LoadingPhase": "PreEarlyLoadingScreen"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "DefaultInstallBundleManager",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemMCP",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineFramework",
+			"Enabled": true
+		},
+		{
+			"Name": "ValkyrieEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "CryptoKeys",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	],
+	"LocalizationTargets": [
+		{
+			"Name": "FortInstallBundleManager",
+			"LoadingPolicy": "Always"
+		}
+	]
+}

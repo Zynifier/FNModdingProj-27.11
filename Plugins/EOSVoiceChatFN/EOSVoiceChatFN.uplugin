@@ -1,0 +1,36 @@
+{
+	"FileVersion": 3,
+	"FriendlyName": "EOS RTC IVoiceChat implementation plugin",
+	"Version": 1,
+	"VersionName": "1.0",
+	"Description": "Voice Chat Interface for EOS RTC.",
+	"Category": "Online Platform",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "http://epicgames.com",
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "EOSVoiceChatFN",
+			"Type": "ClientOnlyNoCommandlet",
+			"PlatformAllowList": [
+				"Android",
+				"IOS",
+				"Mac",
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EOSShared",
+			"Enabled": true
+		},
+		{
+			"Name": "AndroidPermission",
+			"Enabled": true,
+			"PlatformAllowList": [
+				"Android"
+			]
+		}
+	]
+}

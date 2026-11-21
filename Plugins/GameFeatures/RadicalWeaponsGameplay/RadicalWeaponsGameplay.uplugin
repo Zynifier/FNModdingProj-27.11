@@ -1,0 +1,15 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"EditorCustomVirtualPath": "S24",
+	"FortReleaseVersion": "24.00",
+	"Plugins": [
+		{
+			"Name": "MotherGameplay",
+			"Enabled": true
+		}
+	]
+}

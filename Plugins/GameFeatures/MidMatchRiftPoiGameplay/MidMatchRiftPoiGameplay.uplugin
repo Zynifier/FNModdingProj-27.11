@@ -1,0 +1,42 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"EditorCustomVirtualPath": "S24",
+	"FortReleaseVersion": "24.00",
+	"Modules": [
+		{
+			"Name": "MidMatchRiftPoiGameplayRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "MidMatchObjectivesGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "PlayerAugments",
+			"Enabled": true
+		},
+		{
+			"Name": "Ascender",
+			"Enabled": true
+		},
+		{
+			"Name": "POIBanner",
+			"Enabled": true
+		},
+		{
+			"Name": "RiftEncounters",
+			"Enabled": true
+		},
+		{
+			"Name": "KeysAndLocks",
+			"Enabled": true
+		}
+	]
+}

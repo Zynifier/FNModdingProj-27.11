@@ -1,0 +1,45 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Engine/CurveTable.h"
+#include "Engine/DataTable.h"
+#include "Items/FortPersistableItemDefinition.h"
+#include "FortAccountItemDefinition.generated.h"
+
+UCLASS(MinimalAPI, NotBlueprintable)
+class UFortAccountItemDefinition : public UFortPersistableItemDefinition
+{
+	GENERATED_BODY()
+
+protected:
+	UPROPERTY(EditAnywhere, Category="AccountItem")
+	FCurveTableRowHandle LevelToXpHandle;
+
+	UPROPERTY(EditAnywhere, Category="Sacrifice")
+	FCurveTableRowHandle LevelToSacrificeXpHandle;
+
+	UPROPERTY(EditAnywhere, Category="Sacrifice")
+	FDataTableRowHandle SacrificeRecipe;
+
+	UPROPERTY(EditAnywhere, Category="Sacrifice")
+	FDataTableRowHandle TransmogSacrificeRow;
+
+	UPROPERTY(EditAnywhere, AssetRegistrySearchable, Category="Conversion")
+	TArray<FDataTableRowHandle> ConversionRecipes;
+
+	UPROPERTY(EditAnywhere, AssetRegistrySearchable, Category="Conversion")
+	FDataTableRowHandle UpgradeRarityRecipeHandle;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Level")
+	int32 MinLevel;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Level")
+	int32 MaxLevel;
+
+	UPROPERTY()
+	FString GrantToProfileType;
+
+};
+

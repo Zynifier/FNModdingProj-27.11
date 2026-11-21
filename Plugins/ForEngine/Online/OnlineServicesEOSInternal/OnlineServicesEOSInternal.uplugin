@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"FriendlyName": "Online Services EOS Internal",
+	"Version": 1,
+	"VersionName": "1.0",
+	"Description": "Access to EOS including Epic internal interfaces",
+	"Category": "Online Platform",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "https://epicgames.com",
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "OnlineServicesEOSInternal",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineServicesEOS",
+			"Enabled": true
+		}
+	]
+}

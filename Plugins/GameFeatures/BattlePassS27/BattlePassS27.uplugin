@@ -1,0 +1,75 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Active",
+	"EditorCustomVirtualPath": "BattlePass",
+	"FortReleaseVersion": "27.00",
+	"SunsetFortReleaseVersion": "28.00",
+	"Modules": [
+		{
+			"Name": "BattlePassS27UI",
+			"Type": "ClientOnly",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "BattlePassS27_Quests",
+			"Enabled": true
+		},
+		{
+			"Name": "Bounties",
+			"Enabled": true
+		},
+		{
+			"Name": "BattlePassPermanentQuests",
+			"Enabled": true
+		},
+		{
+			"Name": "BRCosmetics",
+			"Enabled": true
+		},
+		{
+			"Name": "FortniteConversation",
+			"Enabled": true
+		},
+		{
+			"Name": "NPCLibrary",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUILegacy",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineGameplayFramework",
+			"Enabled": true
+		},
+		{
+			"Name": "BattlePassBase",
+			"Enabled": true
+		},
+		{
+			"Name": "Lager",
+			"Enabled": true
+		},
+		{
+			"Name": "Irwin",
+			"Enabled": true
+		},
+		{
+			"Name": "MusterPlayerAugments",
+			"Enabled": true
+		},
+		{
+			"Name": "JobBoardTags",
+			"Enabled": true
+		}
+	]
+}

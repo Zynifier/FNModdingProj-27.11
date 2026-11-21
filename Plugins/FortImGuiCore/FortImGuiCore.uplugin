@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.1",
+	"FriendlyName": "Fortnite ImGui Core",
+	"Description": "Contains core features to share between all the ImGui plugins for Fortnite.",
+	"Category": "Debug",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "http://epicgames.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FortImGuiCore",
+			"Type": "DeveloperTool",
+			"LoadingPhase": "PreDefault"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ImGui",
+			"Enabled": true,
+			"Description": "MIT-licensed UE4 ImGui plugin (c) Sebastian Gross. Source: https://github.com/segross/UnrealImGui.\nImGui (c) Omar Cornut. Source: https://github.com/ocornut/imgui"
+		}
+	]
+}

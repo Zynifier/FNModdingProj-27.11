@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"FriendlyName": "REVRuntime",
+	"Version": 1,
+	"VersionName": "1.0",
+	"CreatedBy": "CrankcaseAudio",
+	"CreatedByURL": "",
+	"Description": "",
+	"Category": "",
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "REVRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		},
+		{
+			"Name": "REVRuntimeEditor",
+			"Type": "Editor"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "AudioMotorSim",
+			"Enabled": true
+		}
+	]
+}

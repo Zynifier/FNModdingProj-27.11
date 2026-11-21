@@ -1,0 +1,42 @@
+{
+	"FileVersion": 3,
+	"EnabledByDefault": false,
+	"ExplicitlyLoaded": true,
+	"CanContainContent": true,
+	"FortReleaseVersion": "23.20",
+	"BuiltInInitialFeatureState": "Active",
+	"Modules": [
+		{
+			"Name": "AIDebuggerRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayMessages",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayEventRouter",
+			"Enabled": true
+		}
+	],
+	"Version": 0,
+	"VersionName": "",
+	"FriendlyName": "Fortnite AI Debugger",
+	"Description": "",
+	"Category": "AI",
+	"CreatedBy": "Guillaume Guay",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false
+}

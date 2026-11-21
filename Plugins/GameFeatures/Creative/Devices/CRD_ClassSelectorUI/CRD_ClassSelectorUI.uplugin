@@ -1,0 +1,57 @@
+{
+	"BuiltInInitialFeatureState": "Registered",
+	"CanContainContent": true,
+	"Category": "Game Features",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"Description": "A UI for Class Selection.",
+	"DocsURL": "",
+	"EditorCustomVirtualPath": "Varg",
+	"EnabledByDefault": false,
+	"ExplicitlyLoaded": true,
+	"FileVersion": 3,
+	"FortReleaseVersion": "22.40",
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"Version": 1,
+	"VersionName": "1.0",
+	"VerseScope": "PublicAPI",
+	"CanContainVerse": true,
+	"VersePath": "/Fortnite.com/Devices",
+	"Modules": [
+		{
+			"Name": "CRD_ClassSelectorRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "CRD_ClassSelectorUI",
+			"Type": "ClientOnly",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "BlueprintContext",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		},
+		{
+			"Name": "GameFeatures",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseDevices",
+			"Enabled": true
+		}
+	]
+}

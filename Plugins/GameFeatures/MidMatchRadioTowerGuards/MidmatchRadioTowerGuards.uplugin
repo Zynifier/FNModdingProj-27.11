@@ -1,0 +1,15 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"EditorCustomVirtualPath": "AI/NonParticipants",
+	"FortReleaseVersion": "26.00",
+	"Plugins": [
+		{
+			"Name": "HopscotchWeaponsGameplay",
+			"Enabled": true
+		}
+	]
+}

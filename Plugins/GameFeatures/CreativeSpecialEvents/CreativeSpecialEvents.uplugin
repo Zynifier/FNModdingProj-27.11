@@ -1,0 +1,9 @@
+{
+	"FileVersion": 1,
+	"FriendlyName": "Creative Special Events",
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"FortReleaseVersion": "16.40"
+}

@@ -1,0 +1,44 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#include "Components/FortControllerComponent_MinigameActivity.h"
+
+void UFortControllerComponent_MinigameActivity::ForwardMinigameActivityEnded(const FMinigameActivityEndedData& EndData)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::ForwardMinigameActivityRankChanged(int32 Rank)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::ForwardMinigameActivityScoreChanged(int32 CurrentScore, int32 TotalScore)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::ForwardMinigameActivityStarted(const FMinigameActivityStartedData& StartData)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::ForwardMinigameActivityStatChanged(EMinigameActivityStat Stat, float Value)
+{
+}
+
+UFortControllerComponent_MinigameActivity* UFortControllerComponent_MinigameActivity::GetMinigameActivityComponent(const APawn* Pawn, EMinigameActivityComponentValidityResult& OutIsValid)
+{
+	return nullptr;
+}
+
+void UFortControllerComponent_MinigameActivity::SetUIBestLapTimeEnabled(const bool bEnabled)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::SetUIEnabled(const bool bEnabled)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::SetUIProgressEnabled(const bool bEnabled)
+{
+}
+
+void UFortControllerComponent_MinigameActivity::SetUITimeEnabled(const bool bEnabled)
+{
+}

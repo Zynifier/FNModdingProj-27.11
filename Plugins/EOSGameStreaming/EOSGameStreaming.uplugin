@@ -1,0 +1,36 @@
+{
+	"FileVersion": 1,
+	"Version": 0,
+	"VersionName": "0.1",
+	"FriendlyName": "EOS Game Streaming",
+	"Description": "Game Streaming of UE4 gameplay via EOSSDK service",
+	"Category": "Graphics",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "http://epicgames.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": false,
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EOSGameStreaming",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"TargetDenyList": [
+				"Server"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EOSRTCVideo",
+			"Enabled": true
+		}
+	]
+}

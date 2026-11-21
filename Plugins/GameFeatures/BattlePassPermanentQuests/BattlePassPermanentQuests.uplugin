@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Active",
+	"EditorCustomVirtualPath": "BattlePass",
+	"FortReleaseVersion": "16.00",
+	"Modules": [],
+	"Plugins": [
+		{
+			"Name": "ClamberingCode",
+			"Enabled": true
+		}
+	]
+}

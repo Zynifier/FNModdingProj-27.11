@@ -1,0 +1,46 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Registered",
+	"EditorCustomVirtualPath": "Papaya",
+	"FortReleaseVersion": "16.40",
+	"Modules": [
+		{
+			"Name": "PapayaTimedEvents",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "BRCosmetics",
+			"Enabled": true
+		},
+		{
+			"Name": "MeshNetwork",
+			"Enabled": true
+		},
+		{
+			"Name": "PlayspaceSystem",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeSpecialEvents",
+			"Enabled": true
+		},
+		{
+			"Name": "Motorboat",
+			"Enabled": true
+		},
+		{
+			"Name": "MusicBlocks",
+			"Enabled": true
+		}
+	]
+}

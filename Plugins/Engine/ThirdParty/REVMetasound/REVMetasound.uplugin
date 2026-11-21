@@ -1,0 +1,33 @@
+{
+	"FileVersion": 1,
+	"FriendlyName": "REVMetasound",
+	"Version": 1,
+	"VersionName": "1.0",
+	"CreatedBy": "CrankcaseAudio",
+	"CreatedByURL": "",
+	"Description": "",
+	"Category": "",
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "REVMetasound",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		},
+		{
+			"Name": "REVMetasoundEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Metasound",
+			"Enabled": true
+		},
+		{
+			"Name": "REVRuntime",
+			"Enabled": true
+		}
+	]
+}

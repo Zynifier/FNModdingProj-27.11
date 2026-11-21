@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Active",
+	"EditorCustomVirtualPath": "AI/Wildlife",
+	"FortReleaseVersion": "16.00",
+	"Modules": [
+		{
+			"Name": "IrwinRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "FortWater",
+			"Enabled": true
+		}
+	]
+}

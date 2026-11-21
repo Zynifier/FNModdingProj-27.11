@@ -1,0 +1,23 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#include "Playspaces/Components/FortPlayspaceComponent.h"
+
+void UFortPlayspaceComponent::OnMeshNetworkEventBurst(const FName& EventName, const EMeshNetworkNodeType NodeType, const FString& EventParameters)
+{
+}
+
+void UFortPlayspaceComponent::OnMeshNetworkEventChange(const FName& EventName, const FDateTime& EventStartTime, const EMeshNetworkNodeType NodeType, const FString& EventParameters)
+{
+}
+
+void UFortPlayspaceComponent::OnMeshNetworkEventEnd(const FName& EventName, const EMeshNetworkNodeType NodeType)
+{
+}
+
+void UFortPlayspaceComponent::OnMeshNetworkEventStart(const FName& EventName, const FDateTime& EventStartTime, const EMeshNetworkNodeType NodeType, const FString& EventParameters)
+{
+}
+
+void UFortPlayspaceComponent::OnMeshNetworkReady(EMeshNetworkNodeType NodeType)
+{
+}

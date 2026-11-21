@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Cosmetics Framework Events",
+	"Description": "Provides the ability to subscribe to events from the cosmetics framework",
+	"Category": "Cosmetics",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CosmeticsFrameworkEvents",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

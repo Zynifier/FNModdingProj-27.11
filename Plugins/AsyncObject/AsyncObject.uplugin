@@ -1,0 +1,13 @@
+{
+	"FileVersion": 1,
+	"CanContainContent": false,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "AsyncObject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Active",
+	"FortReleaseVersion": "15.00",
+	"Modules": [],
+	"Plugins": [
+		{
+			"Name": "FortniteConversation",
+			"Enabled": true
+		},
+		{
+			"Name": "Hoagie",
+			"Enabled": true
+		},
+		{
+			"Name": "Motorboat",
+			"Enabled": true
+		},
+		{
+			"Name": "Valet",
+			"Enabled": true
+		}
+	]
+}

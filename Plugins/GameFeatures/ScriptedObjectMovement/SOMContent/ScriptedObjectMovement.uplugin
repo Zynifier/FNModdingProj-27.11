@@ -1,0 +1,14 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Active",
+	"FortReleaseVersion": "18.00",
+	"Plugins": [
+		{
+			"Name": "ScriptedObjectMovementNative",
+			"Enabled": true
+		}
+	]
+}

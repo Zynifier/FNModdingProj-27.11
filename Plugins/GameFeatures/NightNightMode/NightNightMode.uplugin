@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"CanContainContent": true,
+	"ExplicitlyLoaded": true,
+	"EnabledByDefault": false,
+	"BuiltInInitialFeatureState": "Active",
+	"EditorCustomVirtualPath": "Events",
+	"SunsetFortReleaseVersion": "29.00",
+	"FortReleaseVersion": "27.00",
+	"Modules": [
+		{
+			"Name": "NightNightModeRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		}
+	]
+}

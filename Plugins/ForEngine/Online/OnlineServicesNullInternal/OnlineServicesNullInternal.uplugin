@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"FriendlyName": "Online Services Null Internal",
+	"Version": 1,
+	"VersionName": "1.0",
+	"Description": "Internal-only OnlineServicesNull components",
+	"Category": "Online Platform",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "https://epicgames.com",
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "OnlineServicesNullInternal",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineServicesNull",
+			"Enabled": true
+		}
+	]
+}
