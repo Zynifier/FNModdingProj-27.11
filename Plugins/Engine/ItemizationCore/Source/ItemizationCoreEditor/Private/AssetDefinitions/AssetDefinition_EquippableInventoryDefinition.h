@@ -14,14 +14,14 @@ class UAssetDefinition_EquippableInventoryDefinition : public UAssetDefinitionDe
 
 };
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_EquipmentHotBar : public UAssetDefinition_EquippableInventoryDefinition
 {
 	GENERATED_BODY()
 
 };
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_EquipmentSlot : public UAssetDefinition_EquippableInventoryDefinition
 {
 	GENERATED_BODY()

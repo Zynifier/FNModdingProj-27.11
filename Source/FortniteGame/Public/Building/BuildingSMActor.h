@@ -727,7 +727,7 @@ public:
 	FORTNITEGAME_API virtual int32 GetLogicalBuildingIndex() const;
 
 	UFUNCTION(BlueprintPure)
-	FORTNITEGAME_API static const int32 GetMaximumLegalReplicatedHealthValue();
+	static FORTNITEGAME_API const int32 GetMaximumLegalReplicatedHealthValue();
 
 	UFUNCTION(BlueprintCallable)
 	FORTNITEGAME_API UMaterialInstanceDynamic* GetOrCreateMIDOnDefaultMesh(int32 ElementIndex);

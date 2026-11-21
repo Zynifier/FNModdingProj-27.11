@@ -6,7 +6,7 @@
 #include "AssetDefinitionDefault.h"
 #include "AssetDefinition_DaySequence.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_DaySequence : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

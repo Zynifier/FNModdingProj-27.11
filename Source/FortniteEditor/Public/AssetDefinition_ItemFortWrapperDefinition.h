@@ -7,7 +7,7 @@
 #include "Factories/Factory.h"
 #include "AssetDefinition_ItemFortWrapperDefinition.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_ItemFortWrapperDefinition : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

@@ -6,7 +6,7 @@
 #include "AssetDefinitionDefault.h"
 #include "AssetDefinition_MidiFile.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_MidiFile : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

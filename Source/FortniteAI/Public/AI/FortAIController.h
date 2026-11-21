@@ -65,7 +65,7 @@ public:
 	FORTNITEAI_API bool IsAllowedToSleep();
 
 	UFUNCTION(BlueprintPure, Category="AI")
-	FORTNITEAI_API static bool IsIgnoringProximity(AFortAIController* FortAIController);
+	static FORTNITEAI_API bool IsIgnoringProximity(AFortAIController* FortAIController);
 
 	UFUNCTION(BlueprintCallable, Category="AI")
 	FORTNITEAI_API void LockBehaviorResource();

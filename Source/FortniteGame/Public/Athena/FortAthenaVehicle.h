@@ -488,7 +488,7 @@ public:
 	FORTNITEGAME_API virtual bool EjectPlayerPawn(const AFortPlayerPawn* InPlayerPawn);
 
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Vehicle", meta=(HidePin="Target"))
-	FORTNITEGAME_API static void EnableVehicleStencil(AActor* PotentialVehicle, const bool bEnable, bool bHighlighted = false, int32 StencilValueOverride = -1);
+	static FORTNITEGAME_API void EnableVehicleStencil(AActor* PotentialVehicle, const bool bEnable, bool bHighlighted = false, int32 StencilValueOverride = -1);
 
 	UFUNCTION(BlueprintPure, Category="Vehicle", meta=(DeprecatedFunction, DeprecationMessage="This function is no longer supported.  Use VehicleInterface."))
 	FORTNITEGAME_API virtual int32 FindSeatIndex(const AFortPlayerPawn* PlayerPawn) const;
@@ -959,7 +959,7 @@ public:
 	FORTNITEGAME_API virtual void SetUseGravity(const bool bInUseGravity);
 
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Vehicle", meta=(HidePin="Target"))
-	FORTNITEGAME_API static bool SetVehicleStencilHighlighted(AActor* PotentialVehicle, bool bHighlighted, int32 StencilValueOverride = -1);
+	static FORTNITEGAME_API bool SetVehicleStencilHighlighted(AActor* PotentialVehicle, bool bHighlighted, int32 StencilValueOverride = -1);
 
 	UFUNCTION(BlueprintCallable)
 	FORTNITEGAME_API virtual void SetWaterDestructionDelay(const float NewWaterDestructionDelay);

@@ -9,7 +9,7 @@
 /**
  *	UAssetDefinition_SoundLibrary
  */
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_SoundLibrary : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

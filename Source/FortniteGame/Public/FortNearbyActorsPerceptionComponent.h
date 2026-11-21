@@ -86,10 +86,10 @@ public:
 	FORTNITEGAME_API FFortNearbyActorsHandle BP_RegisterListener(const FFortNearbyActorsPerceptionConfiguration& Configuration, FBPOnNearbyActorsPerceptionChangedNearbyActors HandleDeltaDelegate);
 
 	UFUNCTION(BlueprintCallable, Category="Query")
-	FORTNITEGAME_API static bool BP_UnregisterListener(UPARAM(ref) FFortNearbyActorsHandle& Handle);
+	static FORTNITEGAME_API bool BP_UnregisterListener(UPARAM(ref) FFortNearbyActorsHandle& Handle);
 
 	UFUNCTION(BlueprintCallable, Category="Query", meta=(ComponentClass="/Script/FortniteGame.FortNearbyActorsPerceptionComponent", DefaultToSelf="Owner", DeterminesOutputType="ActorComponentClass"))
-	FORTNITEGAME_API static UFortNearbyActorsPerceptionComponent* FindOrCreateNearbyActorsPerceptionComponentOnActor(const AActor* Owner, const TSubclassOf<UFortNearbyActorsPerceptionComponent> ActorComponentClass);
+	static FORTNITEGAME_API UFortNearbyActorsPerceptionComponent* FindOrCreateNearbyActorsPerceptionComponentOnActor(const AActor* Owner, const TSubclassOf<UFortNearbyActorsPerceptionComponent> ActorComponentClass);
 
 };
 

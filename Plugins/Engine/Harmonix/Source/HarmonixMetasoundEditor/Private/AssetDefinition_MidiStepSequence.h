@@ -6,7 +6,7 @@
 #include "AssetDefinitionDefault.h"
 #include "AssetDefinition_MidiStepSequence.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_MidiStepSequence : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

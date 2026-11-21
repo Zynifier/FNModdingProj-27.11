@@ -182,7 +182,7 @@ public:
 	FORTNITEGAME_API const FGameplayTagContainer& GetAdaptivePlayerStatsList() const;
 
 	UFUNCTION()
-	FORTNITEGAME_API static TArray<FString> GetAllPossibleNativeMeshComponentNames();
+	static FORTNITEGAME_API TArray<FString> GetAllPossibleNativeMeshComponentNames();
 
 	UFUNCTION(BlueprintPure, Category="Cosmetics")
 	FORTNITEGAME_API const UFortCosmeticItemAdditionalData* GetDataOfType(TSubclassOf<UFortCosmeticItemAdditionalData> Class) const;

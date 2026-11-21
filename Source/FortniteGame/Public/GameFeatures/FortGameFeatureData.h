@@ -131,7 +131,7 @@ class UFortGameFeatureData : public UGameFeatureData
 public:
 #if WITH_EDITOR
 	UFUNCTION(BlueprintCallable)
-	FORTNITEGAME_API static TArray<FSoftObjectPath> SimulateScanningForPrimaryAssets(UGameFeatureData* GFD);
+	static FORTNITEGAME_API TArray<FSoftObjectPath> SimulateScanningForPrimaryAssets(UGameFeatureData* GFD);
 #endif
 
 protected:

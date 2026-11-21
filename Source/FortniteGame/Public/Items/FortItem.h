@@ -116,7 +116,7 @@ public:
 	FORTNITEGAME_API virtual float GetDurability() const;
 
 	UFUNCTION(BlueprintPure, Category="HomebaseInventory")
-	FORTNITEGAME_API static FText GetEvolveRestrictionReasonText(const EItemEvolutionRestrictionReason Reason);
+	static FORTNITEGAME_API FText GetEvolveRestrictionReasonText(const EItemEvolutionRestrictionReason Reason);
 
 	UFUNCTION(BlueprintPure, Category="Item")
 	FORTNITEGAME_API virtual EFortInventoryFilter GetFilterCategory() const;
@@ -248,7 +248,7 @@ public:
 	FORTNITEGAME_API virtual UFortPersistentResourceItemDefinition* GetUpgradeResourceItemDefinition() const;
 
 	UFUNCTION(BlueprintPure, Category="Item")
-	FORTNITEGAME_API static FText GetUpgradeRestrictionReasonText(const EItemUpgradeRestrictionReason Reason);
+	static FORTNITEGAME_API FText GetUpgradeRestrictionReasonText(const EItemUpgradeRestrictionReason Reason);
 
 	UFUNCTION(BlueprintPure, Category="Item")
 	FORTNITEGAME_API virtual TSoftObjectPtr<UTexture2D> GetWidePreviewImage() const;

@@ -6,7 +6,7 @@
 #include "AssetDefinition.h"
 #include "DynamicUISceneAssetDefinition.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UDynamicUISceneAssetDefinition : public UAssetDefinition
 {
 	GENERATED_BODY()

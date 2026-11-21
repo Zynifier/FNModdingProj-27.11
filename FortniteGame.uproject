@@ -78,11 +78,6 @@
 			]
 		},
 		{
-			"Name": "FortniteTargetPlatform",
-			"Type": "Editor",
-			"LoadingPhase": "None"
-		},
-		{
 			"Name": "FortniteExternalRpc",
 			"Type": "DeveloperTool",
 			"LoadingPhase": "Default"
@@ -186,6 +181,7 @@
 		{
 			"Name": "AndroidDS4Controller",
 			"Enabled": true,
+			"Optional": true,
 			"SupportedTargetPlatforms": [
 				"Android"
 			]
@@ -324,6 +320,7 @@
 		{
 			"Name": "AppsFlyer",
 			"Enabled": true,
+			"Optional": true,
 			"SupportedTargetPlatforms": [
 				"Android",
 				"IOS"
@@ -528,6 +525,7 @@
 		{
 			"Name": "RHIPanicSentinel",
 			"Enabled": true,
+			"Optional": true,
 			"SupportedTargetPlatforms": [
 				"Android"
 			]
@@ -562,7 +560,8 @@
 		},
 		{
 			"Name": "FunctionalTestingEditor",
-			"Enabled": true
+			"Enabled": true,
+			"Optional": true
 		},
 		{
 			"Name": "GameFeatures",
@@ -1427,6 +1426,7 @@
 		{
 			"Name": "PythonAutomationTest",
 			"Enabled": true,
+			"Optional": true,
 			"TargetAllowList": [
 				"Editor"
 			]
@@ -1576,6 +1576,7 @@
 		{
 			"Name": "StreamingFileBackend",
 			"Enabled": true,
+			"Optional": true,
 			"SupportedTargetPlatforms": [
 				"Android",
 				"Win64"

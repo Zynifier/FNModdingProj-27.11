@@ -7,7 +7,7 @@
 #include "Factories/Factory.h"
 #include "AssetDefinition_ItemRarity.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_ItemRarityTable : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

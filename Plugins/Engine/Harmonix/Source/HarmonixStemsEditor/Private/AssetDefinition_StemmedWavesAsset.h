@@ -6,7 +6,7 @@
 #include "AssetDefinitionDefault.h"
 #include "AssetDefinition_StemmedWavesAsset.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_StemmedWavesAsset : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

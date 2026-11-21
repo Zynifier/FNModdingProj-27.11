@@ -95,7 +95,7 @@ class AFortAthenaMutator : public AFortGameplayMutator
 
 public:
 	UFUNCTION(BlueprintCallable, Category="Mutator", meta=(DeterminesOutputType="MutatorClass", WorldContext="ContextObject"))
-	FORTNITEGAME_API static AFortGameplayMutator* GetGameplayMutatorByClass(const UObject* ContextObject, const TSubclassOf<AFortGameplayMutator> MutatorClass);
+	static FORTNITEGAME_API AFortGameplayMutator* GetGameplayMutatorByClass(const UObject* ContextObject, const TSubclassOf<AFortGameplayMutator> MutatorClass);
 
 	UPROPERTY(EditAnywhere, Category="FortAthenaMutator")
 	uint8 bMutatesGameMode : 1;

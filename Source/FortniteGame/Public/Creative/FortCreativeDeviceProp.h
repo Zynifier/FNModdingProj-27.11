@@ -32,20 +32,20 @@ protected:
 	FORTNITEGAME_API bool BP_ShouldSuppressInteractionWidget() const;
 
 	UFUNCTION(BlueprintCallable)
-	FORTNITEGAME_API static FOnlineLinkId CreateLinkId(const FString& LinkString);
+	static FORTNITEGAME_API FOnlineLinkId CreateLinkId(const FString& LinkString);
 
 	UFUNCTION(BlueprintCallable)
-	FORTNITEGAME_API static FOnlineLinkId CreateLinkIdWithVersion(const FString& LinkString, const int32 Version);
+	static FORTNITEGAME_API FOnlineLinkId CreateLinkIdWithVersion(const FString& LinkString, const int32 Version);
 
 	UFUNCTION(BlueprintCallable)
-	FORTNITEGAME_API static const FString LinkIdToString(const FOnlineLinkId& LinkString);
+	static FORTNITEGAME_API const FString LinkIdToString(const FOnlineLinkId& LinkString);
 
 	UPROPERTY(EditDefaultsOnly, Category="Interaction", meta=(DisplayAfter="bSuppressSimpleInteractionWidgetForTouch"))
 	bool bSuppressPlayTimeSimpleInteractionWidgetForTouch;
 
 private:
 	UFUNCTION(BlueprintCallable)
-	FORTNITEGAME_API static bool BPCanInteractNativeHelper(const AFortPawn* InteractingPawn, const UFortActorOptionsComponent* ToyOptionsComponent, const UFortMinigameProgressComponent* MinigameProgressComponent);
+	static FORTNITEGAME_API bool BPCanInteractNativeHelper(const AFortPawn* InteractingPawn, const UFortActorOptionsComponent* ToyOptionsComponent, const UFortMinigameProgressComponent* MinigameProgressComponent);
 
 };
 

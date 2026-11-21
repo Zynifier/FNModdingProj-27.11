@@ -249,7 +249,7 @@ public:
 	FORTNITEGAME_API void AddUniqueTransientOverride(FName InObjectName, FName InPropertyName, bool bInMarkTransient = true);
 
 	UFUNCTION(BlueprintCallable, Category="Spawning", meta=(BlueprintInternalUseOnly="true", UnsafeDuringActorConstruction="true", WorldContext="WorldContextObject"))
-	FORTNITEGAME_API static ABuildingActor* BeginDeferredBuildingActorSpawnFromClass(const UObject* WorldContextObject, TSubclassOf<AActor> ActorClass, const FTransform& SpawnTransform, AActor* OptionalOwner = nullptr, bool bTransient = false);
+	static FORTNITEGAME_API ABuildingActor* BeginDeferredBuildingActorSpawnFromClass(const UObject* WorldContextObject, TSubclassOf<AActor> ActorClass, const FTransform& SpawnTransform, AActor* OptionalOwner = nullptr, bool bTransient = false);
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintPure, Category="Interaction")
 	FORTNITEGAME_API bool BlueprintCanInteract(const AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted = FirstInteraction, const TInteractionType InteractionType = IT_Simple) const;
@@ -303,7 +303,7 @@ public:
 	FORTNITEGAME_API bool CanClientSimulate() const;
 
 	UFUNCTION(BlueprintCallable)
-	FORTNITEGAME_API static bool CanDestroyBuildingActor(ABuildingActor* BuildingActor, AController* DamageInstigator, AActor* DamageCauser);
+	static FORTNITEGAME_API bool CanDestroyBuildingActor(ABuildingActor* BuildingActor, AController* DamageInstigator, AActor* DamageCauser);
 
 	UFUNCTION(BlueprintCallable)
 	FORTNITEGAME_API void ClearPlayedDying();
@@ -375,7 +375,7 @@ public:
 	FORTNITEGAME_API AFortPlayerState* GetOwningPlayerState() const;
 
 	UFUNCTION(BlueprintCallable, Category="Building Actor | Physics Simulation Support")
-	FORTNITEGAME_API static UFortPhysicsObjectComponent* GetPhysicsObjectComponent(ABuildingActor* Building);
+	static FORTNITEGAME_API UFortPhysicsObjectComponent* GetPhysicsObjectComponent(ABuildingActor* Building);
 
 	UFUNCTION(BlueprintPure, Category="Health")
 	FORTNITEGAME_API virtual float GetShield() const;
@@ -408,7 +408,7 @@ public:
 	FORTNITEGAME_API bool IsPreviewBuildingActor() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category="Building", meta=(DisplayName="SpawnBuildingActor", ScriptName="SpawnBuildingActor", WorldContext="WorldContextObject"))
-	FORTNITEGAME_API static ABuildingActor* K2_SpawnBuildingActor(const UObject* WorldContextObject, TSubclassOf<ABuildingActor> Class, const FTransform& Transform, AActor* OptionalOwner = nullptr, AActor* OptionalInstigator = nullptr, const bool bDeferConstruction = false, const bool bTransient = false);
+	static FORTNITEGAME_API ABuildingActor* K2_SpawnBuildingActor(const UObject* WorldContextObject, TSubclassOf<ABuildingActor> Class, const FTransform& Transform, AActor* OptionalOwner = nullptr, AActor* OptionalInstigator = nullptr, const bool bDeferConstruction = false, const bool bTransient = false);
 
 	UFUNCTION(BlueprintNativeEvent, Category="UserOptions")
 	FORTNITEGAME_API void MigrateLegacyUserOptions();

@@ -7,7 +7,7 @@
 #include "Factories/Factory.h"
 #include "AssetDefinition_InventoryRestriction.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_InventoryRestriction : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

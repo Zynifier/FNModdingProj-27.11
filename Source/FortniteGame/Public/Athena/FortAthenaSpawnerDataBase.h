@@ -22,7 +22,7 @@ public:
 
 #if WITH_EDITOR
 	UFUNCTION(BlueprintCallable, Category="Editor Scripting | AI Spawner Data")
-	FORTNITEGAME_API static UFortAthenaSpawnerDataBase* GetSpawnerDataDefaultObject(UObject* SourceObject);
+	static FORTNITEGAME_API UFortAthenaSpawnerDataBase* GetSpawnerDataDefaultObject(UObject* SourceObject);
 #endif
 
 	UPROPERTY(EditDefaultsOnly, AssetRegistrySearchable, Category="Tags")

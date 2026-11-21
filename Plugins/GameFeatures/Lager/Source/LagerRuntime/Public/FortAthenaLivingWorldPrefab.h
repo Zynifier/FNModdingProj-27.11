@@ -59,7 +59,7 @@ public:
 	LAGERRUNTIME_API FBox GetLevelBounds() const;
 
 	UFUNCTION(BlueprintPure, BlueprintAuthorityOnly, meta=(WorldContext="WorldContextObject"))
-	LAGERRUNTIME_API static AFortAthenaLivingWorldPrefab* GetOwningLivingWorldPrefab(const UObject* WorldContextObject);
+	static LAGERRUNTIME_API AFortAthenaLivingWorldPrefab* GetOwningLivingWorldPrefab(const UObject* WorldContextObject);
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	LAGERRUNTIME_API void MakeLevelVisible();

@@ -6,7 +6,7 @@
 #include "AssetDefinitionDefault.h"
 #include "AssetDefinition_StemConfiguration.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_StemConfiguration : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

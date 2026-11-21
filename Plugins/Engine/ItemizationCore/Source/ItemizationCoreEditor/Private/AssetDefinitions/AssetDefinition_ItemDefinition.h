@@ -7,7 +7,7 @@
 #include "Factories/Factory.h"
 #include "AssetDefinition_ItemDefinition.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_ItemDefinition : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()

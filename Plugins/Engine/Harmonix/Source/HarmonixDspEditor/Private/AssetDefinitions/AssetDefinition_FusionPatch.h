@@ -6,7 +6,7 @@
 #include "AssetDefinitionDefault.h"
 #include "AssetDefinition_FusionPatch.generated.h"
 
-UCLASS()
+UCLASS(Abstract)
 class UAssetDefinition_FusionPatch : public UAssetDefinitionDefault
 {
 	GENERATED_BODY()
