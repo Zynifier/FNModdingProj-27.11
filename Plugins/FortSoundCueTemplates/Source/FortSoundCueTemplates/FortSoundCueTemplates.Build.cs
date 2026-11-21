@@ -31,5 +31,19 @@ public class FortSoundCueTemplates : ModuleRules
 			"FortniteGame",
 			"SoundCueTemplates",
 		});
+
+		PrivateDependencyModuleNames.AddRange(new string[]
+		{
+			"GameplayTags",
+		});
+
+		if (Target.bBuildEditor)
+		{
+			PrivateDependencyModuleNames.AddRange(new string[]
+			{
+				"AudioEditor",
+				"UnrealEd",
+			});
+		}
 	}
 }

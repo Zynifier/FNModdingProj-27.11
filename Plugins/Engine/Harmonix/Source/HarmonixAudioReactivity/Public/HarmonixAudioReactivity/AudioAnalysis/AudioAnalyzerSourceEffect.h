@@ -18,16 +18,14 @@ public:
 
 };
 
-/** Stub effect: passes audio through unchanged. Exists so the preset can create a valid effect instance. */
 class FHarmonixAudioAnalyzerSourceEffect : public FSoundEffectSource
 {
 public:
-	virtual void Init(const FSoundEffectSourceInitData& InInitData) override {}
+	virtual void Init(const FSoundEffectSourceInitData& InInitData) override;
 
-	virtual void ProcessAudio(const FSoundEffectSourceInputData& InData, float* OutAudioBufferData) override
-	{
-		FMemory::Memcpy(OutAudioBufferData, InData.InputSourceEffectBufferPtr, sizeof(float) * InData.NumSamples);
-	}
+	virtual void OnPresetChanged() override;
+
+	virtual void ProcessAudio(const FSoundEffectSourceInputData& InData, float* OutAudioBufferData) override;
 };
 
 UCLASS(ClassGroup=("AudioSourceEffect"), meta=(BlueprintSpawnableComponent))

@@ -7,6 +7,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "Math/MathFwd.h"
 #include "Sound/SoundNodeModulatorContinuous.h"
+#include "UObject/ObjectSaveContext.h"
 #include "FortSoundCueTemplateSettings.generated.h"
 
 class UAudioBus;
@@ -44,16 +45,16 @@ struct FORTSOUNDCUETEMPLATES_API FFortContinuousModulatorConfig
 
 public:
 	UPROPERTY(EditAnywhere, Category="Params")
-	FVector2D VolumeRange;
+	FVector2D VolumeRange = FVector2D(0.0f, 1.0f);
 
 	UPROPERTY(EditAnywhere, Category="Params")
-	FVector2D PitchRange;
+	FVector2D PitchRange = FVector2D(0.0f, 1.0f);
 
 	UPROPERTY(EditAnywhere, Category="Params")
-	TEnumAsByte<ModulationParamMode> VolumeMode;
+	TEnumAsByte<ModulationParamMode> VolumeMode = MPM_Normal;
 
 	UPROPERTY(EditAnywhere, Category="Params")
-	TEnumAsByte<ModulationParamMode> PitchMode;
+	TEnumAsByte<ModulationParamMode> PitchMode = MPM_Normal;
 
 };
 
@@ -77,9 +78,16 @@ class UFortSoundCueTemplateDefaultSettings : public UDataAsset
 	GENERATED_BODY()
 
 public:
+	virtual void PreSave(FObjectPreSaveContext ObjectSaveContext) override;
+	virtual void PostLoad() override;
+
 	UFUNCTION()
 	UFortSoundCueTemplateDefaults* GetSettingsForTemplateType(TSubclassOf<UFortSoundCueTemplateBase> TemplateType);
 
+private:
+	void SortTemplateDefaults();
+
+public:
 	UPROPERTY(EditDefaultsOnly, Category="DefaultSettings")
 	TMap<TSubclassOf<UFortSoundCueTemplateBase>, TObjectPtr<UFortSoundCueTemplateDefaults>> TemplateDefaults;
 
@@ -91,6 +99,8 @@ class UFortSoundCueTemplateDefaults : public UDataAsset
 	GENERATED_BODY()
 
 public:
+	UFortSoundCueTemplateDefaults(const FObjectInitializer& ObjectInitializer);
+
 	UPROPERTY(EditDefaultsOnly, Category="General")
 	TObjectPtr<USoundClass> SoundClass;
 

@@ -14,6 +14,16 @@ class FORTSOUNDCUETEMPLATES_API UMusicPack : public UFortSoundCueTemplateBase
 	GENERATED_BODY()
 
 public:
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual void ApplyBaseSettings(USoundCue& SoundCue) const override;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="MusicData")
 	TObjectPtr<USoundWave> MusicLoop;

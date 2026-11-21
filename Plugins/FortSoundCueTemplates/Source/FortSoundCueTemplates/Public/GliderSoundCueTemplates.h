@@ -21,10 +21,10 @@ public:
 	FName ParameterName;
 
 	UPROPERTY(EditAnywhere, Category="Params")
-	FVector2D PitchOutput;
+	FVector2D PitchOutput = FVector2D(0.0f, 1.0f);
 
 	UPROPERTY(EditAnywhere, Category="Params")
-	FVector2D VolumeOutput;
+	FVector2D VolumeOutput = FVector2D(0.0f, 1.0f);
 
 	UPROPERTY(EditAnywhere, Category="Params")
 	TObjectPtr<USoundWave> Sound;
@@ -54,6 +54,22 @@ class FORTSOUNDCUETEMPLATES_API UGliderThrustLoop : public UFortSoundCueTemplate
 	GENERATED_BODY()
 
 public:
+	UGliderThrustLoop(const FObjectInitializer& ObjectInitializer);
+
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+	virtual void LoadTemplateDefaultSettings() override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual bool GetPreviewParameters(TArray<FAudioParameter>& OutParameters) const override;
+
+private:
+	void AddThrustLayer(USoundCue& SoundCue, const FGliderThrustData& ThrustData, FFortSoundCueTemplateNodeParams& Params) const;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="Thrust")
 	FGliderThrustData Forward;
@@ -122,6 +138,18 @@ class FORTSOUNDCUETEMPLATES_API UGliderThrustStart : public UFortSoundCueTemplat
 	GENERATED_BODY()
 
 public:
+	UGliderThrustStart(const FObjectInitializer& ObjectInitializer);
+
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual void ValidateTemplateData() override;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="Thrust")
 	TArray<TObjectPtr<USoundWave>> Variations;

@@ -9,13 +9,13 @@
 #include "UObject/PrimaryAssetId.h"
 #include "FortAccountItemDefinition.generated.h"
 
-UCLASS(NotBlueprintable)
-class FORTNITEGAME_API UFortAccountItemDefinition : public UFortPersistableItemDefinition
+UCLASS(MinimalAPI, NotBlueprintable)
+class UFortAccountItemDefinition : public UFortPersistableItemDefinition
 {
 	GENERATED_BODY()
 
 public:
-	virtual FPrimaryAssetId GetPrimaryAssetId() const override;
+	FORTNITEGAME_API virtual FPrimaryAssetId GetPrimaryAssetId() const override;
 
 private:
 	FPrimaryAssetId CachedPrimaryAssetId;

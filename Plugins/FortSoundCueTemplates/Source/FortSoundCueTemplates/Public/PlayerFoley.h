@@ -19,6 +19,8 @@ class FORTSOUNDCUETEMPLATES_API UPlayerFoleyBase : public UFortSoundCueTemplateB
 	GENERATED_BODY()
 
 public:
+	UPlayerFoleyBase(const FObjectInitializer& ObjectInitializer);
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="TemplateSettings")
 	int32 MaxVariations;
@@ -57,6 +59,23 @@ class FORTSOUNDCUETEMPLATES_API UPlayerFoley : public UPlayerFoleyBase
 	GENERATED_BODY()
 
 public:
+	UPlayerFoley(const FObjectInitializer& ObjectInitializer);
+
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual bool GetPreviewParameters(TArray<FAudioParameter>& OutParameters) const override;
+	virtual void ValidateTemplateData() override;
+
+private:
+	USoundNode* AddVariationLayer(USoundCue& SoundCue, FFortSoundCueTemplateNodeParams& Params, const TArray<TObjectPtr<USoundWave>>& Waves, float Volume) const;
+	void AddElevationLayers(USoundCue& SoundCue, FFortSoundCueTemplateNodeParams& Params, TArray<USoundNode*>& OutElevationNodes) const;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="Waves")
 	TArray<TObjectPtr<USoundWave>> WaveVariations;

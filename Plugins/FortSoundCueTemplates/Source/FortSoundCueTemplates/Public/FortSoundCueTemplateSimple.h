@@ -14,6 +14,18 @@ class FORTSOUNDCUETEMPLATES_API UFortSoundCueTemplateSimple : public UFortSoundC
 	GENERATED_BODY()
 
 public:
+	virtual void PostInitProperties() override;
+
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual void ValidateTemplateData() override;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="Waves")
 	TArray<TObjectPtr<USoundWave>> Variations;

@@ -23,8 +23,5 @@ public class FortniteGameTarget : TargetRules
 			"IrisCoreFortnite",
 			"LauncherSocialDefaults",
 		});
-
-		// Game plugins are enabled in FortniteGame.uproject: EnablePlugins is only allowed for unique
-		// build environments, which installed engine builds don't use for Game targets.
 	}
 }

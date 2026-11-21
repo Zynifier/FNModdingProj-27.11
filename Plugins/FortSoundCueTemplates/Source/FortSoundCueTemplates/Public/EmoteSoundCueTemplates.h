@@ -15,6 +15,21 @@ class FORTSOUNDCUETEMPLATES_API UEmoteBase : public UFortSoundCueTemplateBase
 	GENERATED_BODY()
 
 public:
+	UEmoteBase(const FObjectInitializer& ObjectInitializer);
+
+	virtual void Serialize(FArchive& Ar) override;
+
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual void ApplyBaseSettings(USoundCue& SoundCue) const override;
+	virtual void ValidateTemplateData() override;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="OldEmoteData", meta=(DeprecatedProperty, DeprecationMessage="Use Variations array instead."))
 	TObjectPtr<USoundWave> SoundWave;
@@ -45,12 +60,22 @@ public:
 	FVector2D LoopDelay;
 #endif
 
+#if WITH_EDITORONLY_DATA
+private:
+	bool bLinkMuteOthersPin;
+#endif
+
 };
 
 UCLASS(BlueprintType, HideCategories=("object", "object", "Object"))
 class FORTSOUNDCUETEMPLATES_API UEmoteFoley : public UEmoteBase
 {
 	GENERATED_BODY()
+
+#if WITH_EDITOR
+protected:
+	virtual void ApplyConcurrencySettings(USoundCue& SoundCue) const override;
+#endif
 
 };
 

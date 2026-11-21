@@ -17,6 +17,21 @@ class FORTSOUNDCUETEMPLATES_API UPickaxeBase : public UFortSoundCueTemplateBase
 	GENERATED_BODY()
 
 public:
+	UPickaxeBase(const FObjectInitializer& ObjectInitializer);
+
+	virtual void PostLoad() override;
+
+#if WITH_EDITOR
+	virtual void AddSoundWaves(TArray<TWeakObjectPtr<USoundWave>>& Waves) override;
+	virtual void LoadTemplateDefaultSettings() override;
+
+protected:
+	virtual void OnRebuildGraph(USoundCue& SoundCue) const override;
+	virtual void ValidateTemplateData() override;
+
+public:
+#endif
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category="Waves")
 	TArray<TObjectPtr<USoundWave>> CloseVariations;
