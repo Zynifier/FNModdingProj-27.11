@@ -1,6 +1,18 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "Items/FortItemDefinition.h"
+#include "Items/FortItemTypeEnum.h"
+
+FPrimaryAssetId UFortItemDefinition::GetPrimaryAssetId() const
+{
+	EFortItemType PrimaryAssetItemType = PrimaryAssetIdItemTypeOverride;
+	if (PrimaryAssetItemType == EFortItemType::Max_None)
+	{
+		PrimaryAssetItemType = GetItemType();
+	}
+
+	return FPrimaryAssetId(EFortItemType_ToName(UFortItemTypeFunctionLibrary::GetTemplateType(PrimaryAssetItemType)), GetFName());
+}
 
 void UFortItemDefinition::ClearPrmValues()
 {

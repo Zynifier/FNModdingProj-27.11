@@ -6,12 +6,19 @@
 #include "Engine/CurveTable.h"
 #include "Engine/DataTable.h"
 #include "Items/FortPersistableItemDefinition.h"
+#include "UObject/PrimaryAssetId.h"
 #include "FortAccountItemDefinition.generated.h"
 
 UCLASS(MinimalAPI, NotBlueprintable)
 class UFortAccountItemDefinition : public UFortPersistableItemDefinition
 {
 	GENERATED_BODY()
+
+public:
+	virtual FPrimaryAssetId GetPrimaryAssetId() const override;
+
+private:
+	FPrimaryAssetId CachedPrimaryAssetId;
 
 protected:
 	UPROPERTY(EditAnywhere, Category="AccountItem")

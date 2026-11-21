@@ -310,6 +310,8 @@ enum class EFortItemType : uint8
 	Max_None = 127 UMETA(DisplayName="None"),
 };
 
+FORTNITEGAME_API FName EFortItemType_ToName(EFortItemType ItemType);
+
 UCLASS(MinimalAPI)
 class UFortItemTypeFunctionLibrary : public UBlueprintFunctionLibrary
 {

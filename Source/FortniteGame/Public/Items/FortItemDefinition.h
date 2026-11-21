@@ -65,6 +65,8 @@ class FORTNITEGAME_API UFortItemDefinition : public UMcpItemDefinitionBase, publ
 	GENERATED_BODY()
 
 public:
+	virtual FPrimaryAssetId GetPrimaryAssetId() const override;
+
 	UFUNCTION(BlueprintCallable, Category="Prm")
 	void ClearPrmValues();
 
