@@ -29,11 +29,13 @@ public:
 
 	FORTNITEGAME_API virtual bool IsLoadingEnabled() const override;
 
+#if WITH_EDITOR
 	FORTNITEGAME_API virtual ULevelInstanceComponent* GetLevelInstanceComponent() const override;
 
 	FORTNITEGAME_API virtual ELevelInstanceRuntimeBehavior GetDesiredRuntimeBehavior() const override;
 
 	FORTNITEGAME_API virtual ELevelInstanceRuntimeBehavior GetDefaultRuntimeBehavior() const override;
+#endif
 
 protected:
 	UPROPERTY(EditAnywhere, Category="Level", meta=(DisplayName="Level", NoCreate))

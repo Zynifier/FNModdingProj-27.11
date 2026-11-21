@@ -14,5 +14,7 @@ public class OodleDXTTextureFormat : ModuleRules
 			"CoreUObject",
 			"Engine",
 		});
+
+		PrivateIncludePathModuleNames.Add("TextureFormat");
 	}
 }

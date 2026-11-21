@@ -825,7 +825,7 @@
 		},
 		{
 			"Name": "OnlineSubsystemTencent",
-			"Enabled": true,
+			"Enabled": false,
 			"Optional": true
 		},
 		{
@@ -1756,6 +1756,1106 @@
 		},
 		{
 			"Name": "UIFramework",
+			"Enabled": true
+		},
+		{
+			"Name": "AIDebugger",
+			"Enabled": true
+		},
+		{
+			"Name": "AirJellyfish",
+			"Enabled": true
+		},
+		{
+			"Name": "AnnualRefundToken",
+			"Enabled": true
+		},
+		{
+			"Name": "ArmoredBattleBus",
+			"Enabled": true
+		},
+		{
+			"Name": "Ascender",
+			"Enabled": true
+		},
+		{
+			"Name": "AscenderCode",
+			"Enabled": true
+		},
+		{
+			"Name": "AutoAimWeapon",
+			"Enabled": true
+		},
+		{
+			"Name": "AwfulDuck",
+			"Enabled": true
+		},
+		{
+			"Name": "BRCosmetics",
+			"Enabled": true
+		},
+		{
+			"Name": "BallerV2",
+			"Enabled": true
+		},
+		{
+			"Name": "BattlePassBase",
+			"Enabled": true
+		},
+		{
+			"Name": "BattlePassPermanentQuests",
+			"Enabled": true
+		},
+		{
+			"Name": "BattlePassS27",
+			"Enabled": true
+		},
+		{
+			"Name": "BattlePassS27_Quests",
+			"Enabled": true
+		},
+		{
+			"Name": "BigBushGrenade",
+			"Enabled": true
+		},
+		{
+			"Name": "BigLeafPile",
+			"Enabled": true
+		},
+		{
+			"Name": "BombableWallsGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "Bounties",
+			"Enabled": true
+		},
+		{
+			"Name": "CPC_RL",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_AIDebugger",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_AIPatrolPath",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_AudioMixer",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_AudioPlayer",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_CinematicSequence",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_ClassSelectorUI",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_CrowdVolume",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_DanceVolume",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_DataChannelTrigger",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_DeploymentConsole",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_GameStream",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_HenchmanSpawner",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_LevelInstance",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_LootController",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_Mannequin",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_MapSettingsDevice",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_Melee",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_ModalDialog",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_PlayerTracker",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_PointLight",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_PropManipulationDevice",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_RealTimeClock",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_SentryDevice",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_StormCaller",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_StreamingRadio",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_ThrowingToy",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_Volume",
+			"Enabled": true
+		},
+		{
+			"Name": "CRD_VolumetricRegion",
+			"Enabled": true
+		},
+		{
+			"Name": "Caretaker",
+			"Enabled": true
+		},
+		{
+			"Name": "CharacterCollectionMapScreen",
+			"Enabled": true
+		},
+		{
+			"Name": "ChronoConsumables",
+			"Enabled": true
+		},
+		{
+			"Name": "ChronoPlayerAugments",
+			"Enabled": true
+		},
+		{
+			"Name": "ChronoSwarmGrenade",
+			"Enabled": true
+		},
+		{
+			"Name": "ChronoWeaponGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "ClamberingCode",
+			"Enabled": true
+		},
+		{
+			"Name": "CloakGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "CobraDMR",
+			"Enabled": true
+		},
+		{
+			"Name": "CollectionMapShared",
+			"Enabled": true
+		},
+		{
+			"Name": "CompanionAI",
+			"Enabled": true
+		},
+		{
+			"Name": "ContextualTraversal",
+			"Enabled": true
+		},
+		{
+			"Name": "CorruptionGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "CorruptionGameplayCode",
+			"Enabled": true
+		},
+		{
+			"Name": "CorruptionItems",
+			"Enabled": true
+		},
+		{
+			"Name": "CowCatcherModCode",
+			"Enabled": true
+		},
+		{
+			"Name": "Crafting",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeCoreDevices",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeDebugMenu",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeDynamicUI",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeEditCameraMode",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeEmporium",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeLowMemoryFallback",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeOpenFrontEndShop",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeRoyale",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeSpecialEvents",
+			"Enabled": true
+		},
+		{
+			"Name": "CreativeVideoPlayer",
+			"Enabled": true
+		},
+		{
+			"Name": "CreatorRefreshMyIsland",
+			"Enabled": true
+		},
+		{
+			"Name": "Crew",
+			"Enabled": true
+		},
+		{
+			"Name": "DaisyWeaponGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "DamageNumbers",
+			"Enabled": true
+		},
+		{
+			"Name": "DeployableTurretGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "Dirtbike",
+			"Enabled": true
+		},
+		{
+			"Name": "DiscoveryBrowser",
+			"Enabled": true
+		},
+		{
+			"Name": "DoorBashContent",
+			"Enabled": true
+		},
+		{
+			"Name": "DynamicAthenaHUD",
+			"Enabled": true
+		},
+		{
+			"Name": "DynamicBacchusHUD",
+			"Enabled": true
+		},
+		{
+			"Name": "DynamicCapsuleCode",
+			"Enabled": true
+		},
+		{
+			"Name": "DynamicRollTables",
+			"Enabled": true
+		},
+		{
+			"Name": "EOSVoiceChatFN",
+			"Enabled": true
+		},
+		{
+			"Name": "ElectraDataChannel",
+			"Enabled": true
+		},
+		{
+			"Name": "Encounters",
+			"Enabled": true
+		},
+		{
+			"Name": "Energy",
+			"Enabled": true
+		},
+		{
+			"Name": "EnergyProps",
+			"Enabled": true
+		},
+		{
+			"Name": "EntityCore",
+			"Enabled": true
+		},
+		{
+			"Name": "EntityFortnite",
+			"Enabled": true
+		},
+		{
+			"Name": "EpicGamesEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "EpicGamesTemporary",
+			"Enabled": true
+		},
+		{
+			"Name": "EventMode",
+			"Enabled": true
+		},
+		{
+			"Name": "EventScreenBase",
+			"Enabled": true
+		},
+		{
+			"Name": "FMCore",
+			"Enabled": true
+		},
+		{
+			"Name": "FMDeviceCables",
+			"Enabled": true
+		},
+		{
+			"Name": "FMInWorldKnobs",
+			"Enabled": true
+		},
+		{
+			"Name": "FMVK",
+			"Enabled": true
+		},
+		{
+			"Name": "FNE_Volume",
+			"Enabled": true
+		},
+		{
+			"Name": "Fabric",
+			"Enabled": true
+		},
+		{
+			"Name": "FabricUI",
+			"Enabled": true
+		},
+		{
+			"Name": "FallTeleportation",
+			"Enabled": true
+		},
+		{
+			"Name": "FlipperGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "FortImGuiCore",
+			"Enabled": true
+		},
+		{
+			"Name": "FortMetaSoundWeapon",
+			"Enabled": true
+		},
+		{
+			"Name": "FortaniumGeneral",
+			"Enabled": true
+		},
+		{
+			"Name": "FortniteConversation",
+			"Enabled": true
+		},
+		{
+			"Name": "FortniteConversationUI",
+			"Enabled": true
+		},
+		{
+			"Name": "Fringeplank_Firework",
+			"Enabled": true
+		},
+		{
+			"Name": "GameHubNative",
+			"Enabled": true
+		},
+		{
+			"Name": "Gifting",
+			"Enabled": true
+		},
+		{
+			"Name": "GoldenPOI",
+			"Enabled": true
+		},
+		{
+			"Name": "GrappleGlider",
+			"Enabled": true
+		},
+		{
+			"Name": "GrappleGloves",
+			"Enabled": true
+		},
+		{
+			"Name": "GrappleParent",
+			"Enabled": true
+		},
+		{
+			"Name": "GrindRail",
+			"Enabled": true
+		},
+		{
+			"Name": "Harmonix",
+			"Enabled": true
+		},
+		{
+			"Name": "HeadsetGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "HealthBar",
+			"Enabled": true
+		},
+		{
+			"Name": "HealthShieldRegen",
+			"Enabled": true
+		},
+		{
+			"Name": "HeistBaseGuards",
+			"Enabled": true
+		},
+		{
+			"Name": "HeistBasesGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "HitTicks",
+			"Enabled": true
+		},
+		{
+			"Name": "Hoagie",
+			"Enabled": true
+		},
+		{
+			"Name": "Homer",
+			"Enabled": true
+		},
+		{
+			"Name": "HopscotchWeaponsGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "Ice",
+			"Enabled": true
+		},
+		{
+			"Name": "IceCream",
+			"Enabled": true
+		},
+		{
+			"Name": "ImGui",
+			"Enabled": true
+		},
+		{
+			"Name": "Inferno",
+			"Enabled": true
+		},
+		{
+			"Name": "Irwin",
+			"Enabled": true
+		},
+		{
+			"Name": "ItemShop",
+			"Enabled": true
+		},
+		{
+			"Name": "JobBoardTags",
+			"Enabled": true
+		},
+		{
+			"Name": "KatanaGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "KeysAndLocks",
+			"Enabled": true
+		},
+		{
+			"Name": "KeysAndLocksUI",
+			"Enabled": true
+		},
+		{
+			"Name": "Knockback",
+			"Enabled": true
+		},
+		{
+			"Name": "Koala",
+			"Enabled": true
+		},
+		{
+			"Name": "Labrador",
+			"Enabled": true
+		},
+		{
+			"Name": "Lager",
+			"Enabled": true
+		},
+		{
+			"Name": "LaserGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "LaunchPadItemGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "LevelInstanceContent",
+			"Enabled": true
+		},
+		{
+			"Name": "LilWhip",
+			"Enabled": true
+		},
+		{
+			"Name": "Locker",
+			"Enabled": true
+		},
+		{
+			"Name": "Lonelies",
+			"Enabled": true
+		},
+		{
+			"Name": "MLDeformer",
+			"Enabled": true
+		},
+		{
+			"Name": "Mantis",
+			"Enabled": true
+		},
+		{
+			"Name": "MatchQuests",
+			"Enabled": true
+		},
+		{
+			"Name": "MatchmakingPortal",
+			"Enabled": true
+		},
+		{
+			"Name": "MediaMetasound",
+			"Enabled": true
+		},
+		{
+			"Name": "MeshCosmetics",
+			"Enabled": true
+		},
+		{
+			"Name": "MidMatchAssignedGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "MidMatchObjectivesGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "MidMatchRadioTowerGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "MidMatchRiftPoiGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "MidmatchRadioTowerGuards",
+			"Enabled": true
+		},
+		{
+			"Name": "Motd",
+			"Enabled": true
+		},
+		{
+			"Name": "MotherGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "Motorboat",
+			"Enabled": true
+		},
+		{
+			"Name": "Motorcycle",
+			"Enabled": true
+		},
+		{
+			"Name": "MudGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "MusicBlocks",
+			"Enabled": true
+		},
+		{
+			"Name": "MusterConsumables",
+			"Enabled": true
+		},
+		{
+			"Name": "MusterConsumablesUI",
+			"Enabled": true
+		},
+		{
+			"Name": "MusterContainers",
+			"Enabled": true
+		},
+		{
+			"Name": "MusterCoreWeapons",
+			"Enabled": true
+		},
+		{
+			"Name": "MusterPlayerAugments",
+			"Enabled": true
+		},
+		{
+			"Name": "NPCLibrary",
+			"Enabled": true
+		},
+		{
+			"Name": "Nevada",
+			"Enabled": true
+		},
+		{
+			"Name": "NightNightMode",
+			"Enabled": true
+		},
+		{
+			"Name": "POIBanner",
+			"Enabled": true
+		},
+		{
+			"Name": "PapayaGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "PictureInPicture",
+			"Enabled": true
+		},
+		{
+			"Name": "PictureInPictureFNEvents",
+			"Enabled": true
+		},
+		{
+			"Name": "PlayerAugments",
+			"Enabled": true
+		},
+		{
+			"Name": "PlayerAugmentsCode",
+			"Enabled": true
+		},
+		{
+			"Name": "PortAShackGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "PrimalGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "RadicalWeaponsGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "RandomPrefabSpawning",
+			"Enabled": true
+		},
+		{
+			"Name": "ResolveCannon",
+			"Enabled": true
+		},
+		{
+			"Name": "ResolveGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "ResolveTurret",
+			"Enabled": true
+		},
+		{
+			"Name": "RidingCode",
+			"Enabled": true
+		},
+		{
+			"Name": "RidingContent",
+			"Enabled": true
+		},
+		{
+			"Name": "RiftEncounters",
+			"Enabled": true
+		},
+		{
+			"Name": "RockVehicle",
+			"Enabled": true
+		},
+		{
+			"Name": "RocketRamGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "RopeAndChains",
+			"Enabled": true
+		},
+		{
+			"Name": "Rufus",
+			"Enabled": true
+		},
+		{
+			"Name": "RufusLoot",
+			"Enabled": true
+		},
+		{
+			"Name": "S24PlayerAugments",
+			"Enabled": true
+		},
+		{
+			"Name": "STW_Lager",
+			"Enabled": true
+		},
+		{
+			"Name": "STW_MapPickupDisplay",
+			"Enabled": true
+		},
+		{
+			"Name": "SaveTheWorld",
+			"Enabled": true
+		},
+		{
+			"Name": "SawbladeGun",
+			"Enabled": true
+		},
+		{
+			"Name": "ScoutDrone",
+			"Enabled": true
+		},
+		{
+			"Name": "ScriptedObjectMovement",
+			"Enabled": true
+		},
+		{
+			"Name": "ScriptedObjectMovementNative",
+			"Enabled": true
+		},
+		{
+			"Name": "ServerRollQuests",
+			"Enabled": true
+		},
+		{
+			"Name": "SharedWeaponAnims",
+			"Enabled": true
+		},
+		{
+			"Name": "ShielderGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "ShockwaveMace",
+			"Enabled": true
+		},
+		{
+			"Name": "SidewaysCode",
+			"Enabled": true
+		},
+		{
+			"Name": "SidewaysGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "SmartObjectLibrary",
+			"Enabled": true
+		},
+		{
+			"Name": "Solaris",
+			"Enabled": true
+		},
+		{
+			"Name": "SoundIndicatorManager",
+			"Enabled": true
+		},
+		{
+			"Name": "SpecialEventCountdown",
+			"Enabled": true
+		},
+		{
+			"Name": "SpecialEventGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "SpecialSurfaceCoverage",
+			"Enabled": true
+		},
+		{
+			"Name": "SpeechGraphics",
+			"Enabled": true
+		},
+		{
+			"Name": "SpicyBerry",
+			"Enabled": true
+		},
+		{
+			"Name": "Sportbike",
+			"Enabled": true
+		},
+		{
+			"Name": "Squeegee",
+			"Enabled": true
+		},
+		{
+			"Name": "SrirachaRanch",
+			"Enabled": true
+		},
+		{
+			"Name": "SrirachaRanchValet",
+			"Enabled": true
+		},
+		{
+			"Name": "StateDrivenActor",
+			"Enabled": true
+		},
+		{
+			"Name": "StoreSelection",
+			"Enabled": true
+		},
+		{
+			"Name": "StormShieldModifier",
+			"Enabled": true
+		},
+		{
+			"Name": "StormSickness",
+			"Enabled": true
+		},
+		{
+			"Name": "Superstorm",
+			"Enabled": true
+		},
+		{
+			"Name": "SupplyDropRadioGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "TacOvershield",
+			"Enabled": true
+		},
+		{
+			"Name": "TacticalSprintGame",
+			"Enabled": true
+		},
+		{
+			"Name": "TacticalSprintUI",
+			"Enabled": true
+		},
+		{
+			"Name": "Tank",
+			"Enabled": true
+		},
+		{
+			"Name": "Tempest",
+			"Enabled": true
+		},
+		{
+			"Name": "Tweening",
+			"Enabled": true
+		},
+		{
+			"Name": "UIChart",
+			"Enabled": true
+		},
+		{
+			"Name": "UnrealEngineExperimental",
+			"Enabled": true
+		},
+		{
+			"Name": "UnstableLiquidGun",
+			"Enabled": true
+		},
+		{
+			"Name": "VGameplayRst",
+			"Enabled": true
+		},
+		{
+			"Name": "VKAI",
+			"Enabled": true
+		},
+		{
+			"Name": "VKDownloadOnDemand",
+			"Enabled": true
+		},
+		{
+			"Name": "VKEdit",
+			"Enabled": true
+		},
+		{
+			"Name": "VKPlay",
+			"Enabled": true
+		},
+		{
+			"Name": "Valet",
+			"Enabled": true
+		},
+		{
+			"Name": "ValetMods",
+			"Enabled": true
+		},
+		{
+			"Name": "Valkyrie",
+			"Enabled": true
+		},
+		{
+			"Name": "ValkyrieFortnite",
+			"Enabled": true
+		},
+		{
+			"Name": "ValkyrieValidation",
+			"Enabled": true
+		},
+		{
+			"Name": "VaultingCode",
+			"Enabled": true
+		},
+		{
+			"Name": "VehicleAudio",
+			"Enabled": true
+		},
+		{
+			"Name": "Verse",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseAIBase",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseColors",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseCreature",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseDevices",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseExperimental",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseFortnite",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseFortniteInternal",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseGameplayDebug",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseGameplayTags",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseInterface",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseMovement",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseNPC",
+			"Enabled": true
+		},
+		{
+			"Name": "VersePlayspace",
+			"Enabled": true
+		},
+		{
+			"Name": "VersePrint",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseRestricted",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseSimulation",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseSimulationMetadata",
+			"Enabled": true
+		},
+		{
+			"Name": "VerseUI",
+			"Enabled": true
+		},
+		{
+			"Name": "VictoryCrownsGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "WarEffort",
+			"Enabled": true
+		},
+		{
+			"Name": "WheelGrenade",
+			"Enabled": true
+		},
+		{
+			"Name": "Wind",
+			"Enabled": true
+		},
+		{
+			"Name": "WolfCode",
+			"Enabled": true
+		},
+		{
+			"Name": "XpEverywhereUI",
 			"Enabled": true
 		}
 	],

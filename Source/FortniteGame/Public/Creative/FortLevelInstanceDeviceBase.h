@@ -38,11 +38,13 @@ public:
 
 	virtual bool IsLoadingEnabled() const override;
 
+#if WITH_EDITOR
 	virtual ULevelInstanceComponent* GetLevelInstanceComponent() const override;
 
 	virtual ELevelInstanceRuntimeBehavior GetDesiredRuntimeBehavior() const override;
 
 	virtual ELevelInstanceRuntimeBehavior GetDefaultRuntimeBehavior() const override;
+#endif
 
 protected:
 	UFUNCTION(BlueprintImplementableEvent)

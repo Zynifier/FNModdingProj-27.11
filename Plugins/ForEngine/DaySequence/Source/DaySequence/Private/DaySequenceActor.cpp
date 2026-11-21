@@ -145,6 +145,7 @@ UObject* ADaySequenceActor::GetInstanceData() const
 	return nullptr;
 }
 
+#if WITH_EDITOR
 UMovieSceneSequence* ADaySequenceActor::RetrieveOwnedSequence() const
 {
 	return nullptr;
@@ -158,3 +159,4 @@ TSharedPtr<FStructOnScope> ADaySequenceActor::GetObjectPickerProxy(TSharedPtr<IP
 void ADaySequenceActor::UpdateObjectFromProxy(FStructOnScope& Proxy, IPropertyHandle& ObjectPropertyHandle)
 {
 }
+#endif

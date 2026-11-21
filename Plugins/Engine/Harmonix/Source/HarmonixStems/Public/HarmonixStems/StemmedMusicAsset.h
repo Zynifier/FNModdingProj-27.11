@@ -94,7 +94,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="HarmonixStems")
 	TArray<FWavesAssetStem> WavesStems;
 
+#if WITH_EDITOR
 	virtual bool IsCompiling() const override;
+#endif
 
 };
 

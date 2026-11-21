@@ -141,11 +141,13 @@ public:
 
 	virtual UObject* GetInstanceData() const override;
 
+#if WITH_EDITOR
 	virtual UMovieSceneSequence* RetrieveOwnedSequence() const override;
 
 	virtual TSharedPtr<FStructOnScope> GetObjectPickerProxy(TSharedPtr<IPropertyHandle> ObjectPropertyHandle) override;
 
 	virtual void UpdateObjectFromProxy(FStructOnScope& Proxy, IPropertyHandle& ObjectPropertyHandle) override;
+#endif
 
 protected:
 	UPROPERTY(Transient)

@@ -63,6 +63,7 @@ bool AFortLevelInstanceDeviceBase::IsLoadingEnabled() const
 	return false;
 }
 
+#if WITH_EDITOR
 ULevelInstanceComponent* AFortLevelInstanceDeviceBase::GetLevelInstanceComponent() const
 {
 	return nullptr;
@@ -77,3 +78,4 @@ ELevelInstanceRuntimeBehavior AFortLevelInstanceDeviceBase::GetDefaultRuntimeBeh
 {
 	return ELevelInstanceRuntimeBehavior();
 }
+#endif

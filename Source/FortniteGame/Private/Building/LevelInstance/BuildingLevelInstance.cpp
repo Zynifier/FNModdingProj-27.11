@@ -41,6 +41,7 @@ bool ABuildingLevelInstance::IsLoadingEnabled() const
 	return false;
 }
 
+#if WITH_EDITOR
 ULevelInstanceComponent* ABuildingLevelInstance::GetLevelInstanceComponent() const
 {
 	return nullptr;
@@ -55,3 +56,4 @@ ELevelInstanceRuntimeBehavior ABuildingLevelInstance::GetDefaultRuntimeBehavior(
 {
 	return ELevelInstanceRuntimeBehavior();
 }
+#endif

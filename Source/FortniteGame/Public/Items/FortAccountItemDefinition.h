@@ -9,8 +9,8 @@
 #include "UObject/PrimaryAssetId.h"
 #include "FortAccountItemDefinition.generated.h"
 
-UCLASS(MinimalAPI, NotBlueprintable)
-class UFortAccountItemDefinition : public UFortPersistableItemDefinition
+UCLASS(NotBlueprintable)
+class FORTNITEGAME_API UFortAccountItemDefinition : public UFortPersistableItemDefinition
 {
 	GENERATED_BODY()
 
