@@ -29,5 +29,12 @@ class UValkyrieAssetAdapterActorFactory : public UActorFactory
 {
 	GENERATED_BODY()
 
+public:
+	virtual bool CanCreateActorFrom(const FAssetData& AssetData, FText& OutErrorMsg) override
+	{
+		// The base implementation dereferences the default actor for valid assets.
+		return GetDefaultActor(AssetData) != nullptr && Super::CanCreateActorFrom(AssetData, OutErrorMsg);
+	}
+
 };
 

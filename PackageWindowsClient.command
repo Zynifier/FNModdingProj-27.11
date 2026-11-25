@@ -5,7 +5,7 @@
 
 # ---- settings -------------------------------------------------------------------------------
 VM_NAME="Windows 11"
-ENGINE_DIR_MAC="$HOME/Downloads/Windows/Engine"     # Windows installed-build engine (must be inside $HOME)
+WIN_ENGINE='C:\UE\Engine'                          # Windows installed-build engine, stored on the VM disk (not the Mac share)
 CLIENT_CONFIG="Development"                          # Development | Shipping | DebugGame | Test
 # ---------------------------------------------------------------------------------------------
 
@@ -14,12 +14,10 @@ PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
 UPROJECT_NAME="$(basename "$(ls "$PROJECT_DIR"/*.uproject | head -1)")"
 
 case "$PROJECT_DIR" in "$HOME"/*) ;; *) echo "Project must live inside $HOME so the VM can see it as Z:\\"; exit 1;; esac
-case "$ENGINE_DIR_MAC" in "$HOME"/*) ;; *) echo "Engine must live inside $HOME so the VM can see it as Z:\\"; exit 1;; esac
 
-# Mac path -> Windows path on the Z: drive (Parallels "Mac Home"). Everything uses Z: so Unreal never sees a UNC path.
+# Mac path -> Windows path on the Z: drive (Parallels "Mac Home"). The project uses Z: so Unreal never sees a UNC path.
 to_win() { local rel="${1#$HOME/}"; echo "Z:\\${rel//\//\\}"; }
 WIN_PROJECT="$(to_win "$PROJECT_DIR")\\$UPROJECT_NAME"
-WIN_ENGINE="$(to_win "$ENGINE_DIR_MAC")"
 
 command -v prlctl >/dev/null || { echo "prlctl not found. Is Parallels Desktop installed?"; exit 1; }
 
@@ -39,7 +37,8 @@ WIN_CMD="$(to_win "$WIN_CMD_MAC")"
 # the engine's dotnet lookup at it directly (it runs under emulation).
 cat > "$WIN_CMD_MAC" <<EOF
 @echo off
-if not exist Z:\\ net use Z: \\\\Mac\\Home /persistent:no >nul 2>&1
+rem Parallels can reshuffle drive letters after a crash; make sure Z: is the Mac home folder.
+net use | findstr /i /c:"Z:" | findstr /i /c:"\\\\Mac\\Home" >nul || ( net use Z: /delete /y >nul 2>&1 & net use Z: \\\\Mac\\Home /persistent:no >nul 2>&1 )
 set UE_DOTNET_VERSION=6.0.302
 set UE_DOTNET_DIR=$WIN_ENGINE\\Binaries\\ThirdParty\\DotNet\\6.0.302\\windows
 set PATH=%UE_DOTNET_DIR%;%PATH%
@@ -60,9 +59,22 @@ echo "Log: $LOG"
 echo "Output: $PROJECT_DIR/Saved/StagedBuilds/Windows"
 echo
 
+# Make sure Z: is the Mac home folder before launching anything from it (Parallels can reshuffle letters after a crash).
+prlctl exec "$VM_NAME" --current-user cmd /c 'net use | findstr /i /c:"Z:" | findstr /i /c:"\\Mac\Home" >nul || ( net use Z: /delete /y >nul 2>&1 & net use Z: \\Mac\Home /persistent:no >nul 2>&1 )' >/dev/null 2>&1
+
 # --current-user runs in your logged-in Windows session, where Z: is already mapped by Parallels.
-prlctl exec "$VM_NAME" --current-user cmd /c "$WIN_CMD" 2>&1 | tee "$LOG"
-RC=${PIPESTATUS[0]}
+# The Parallels shared folder (Z:) sometimes drops reads under heavy load, which kills the shader
+# compiler mid-cook ("cannot find ShaderCompileWorker.exe", "directory does not exist"). Shader results
+# are cached, so simply retrying gets further each time.
+MAX_ATTEMPTS=8
+: > "$LOG"
+for ((ATTEMPT=1; ATTEMPT<=MAX_ATTEMPTS; ATTEMPT++)); do
+  echo "=== Attempt $ATTEMPT of $MAX_ATTEMPTS ===" | tee -a "$LOG"
+  prlctl exec "$VM_NAME" --current-user cmd /c "$WIN_CMD" 2>&1 | tee -a "$LOG"
+  RC=${PIPESTATUS[0]}
+  [ "$RC" -eq 0 ] && break
+  [ "$ATTEMPT" -lt "$MAX_ATTEMPTS" ] && { echo "Attempt $ATTEMPT failed (exit $RC), retrying in 10s..." | tee -a "$LOG"; sleep 10; }
+done
 
 echo
 if [ "$RC" -eq 0 ]; then
