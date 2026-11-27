@@ -72,7 +72,7 @@ TSoftObjectPtr<UTexture2D> UFortItemDefinition::GetInactivePreviewImage() const
 
 EFortItemType UFortItemDefinition::GetItemType() const
 {
-	return EFortItemType();
+	return ItemType;
 }
 
 FText UFortItemDefinition::GetItemTypeName(bool bUsePlural) const
